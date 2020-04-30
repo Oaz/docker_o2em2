@@ -7,6 +7,8 @@ The o2em2 included in the image includes some patches of my own.
 
 # Launching the container
 Here are some indications on how to launch the container :
+several ways of launching X11 applications are avaialble. Here only the most straightforward is provided.
+
 
 ## Minimal command :
 docker run -it --device /dev/snd --net=host --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/root/.Xauthority -e DISPLAY o2em2
@@ -24,4 +26,5 @@ docker run -it \\ \
     -e DISPLAY=:0  \\ \
     o2em2 \\ \
     ./o2em2 vp_14.bin
+
 
